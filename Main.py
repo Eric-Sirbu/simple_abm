@@ -27,9 +27,9 @@ class State(enum.IntEnum):
 class InfectionModel(Model):
     """A model for infection spread."""
 
-    def __init__(self, N=10, width=10, height=10, ptrans=0.5,
-                 death_rate=0.02, recovery_days=21,
-                 recovery_sd=7, infected_start=0.02, surrounded = True, walls = [], bed_capacity=1, death_untreated=1.5,
+    def __init__(self, N=500, width=50, height=50, ptrans=0.25,
+                 death_rate=0.01, recovery_days=21,
+                 recovery_sd=7, infected_start=0.02, surrounded = False, walls = [], bed_capacity=0.1, death_untreated=1,
                  tries_to_move=1, chance_to_stay=0, stay_if_infected=0):
         self.num_agents = N
         self.recovery_days = recovery_days
