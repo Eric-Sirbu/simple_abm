@@ -129,7 +129,6 @@ class MyAgent(Agent):
             include_center=False)
 
         new_position = self.random.choice(possible_steps)
-        i = 0
         stay_in_place = self.model.chance_to_stay
         if self.state is State.INFECTED:
             stay_in_place += self.model.stay_if_infected
@@ -138,6 +137,7 @@ class MyAgent(Agent):
         elif self.model.not_on_each_other:
             # if len(self.model.grid.get_cell_list_contents([new_position])) != 0:
             #     new_position = self.pos
+            i = 0
             while i < self.model.tries_to_move and len(self.model.grid.get_cell_list_contents([new_position])) > 0:
                 new_position = self.random.choice(possible_steps)
                 i += 1
