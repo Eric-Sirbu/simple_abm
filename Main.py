@@ -15,6 +15,7 @@ from mesa.datacollection import DataCollector
 import enum
 
 #copied in parts from https://dmnfarrell.github.io/bioinformatics/abm-mesa-python
+#requires mesa 1.2.1 (or older)
 
 class State(enum.IntEnum):
     SUSCEPTIBLE = 0
