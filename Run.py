@@ -19,11 +19,12 @@ for i in range(3):
     for i in range(steps):
         print(i)
         model.step()
-        p1 = Main.plot_states_bokeh(model, title='step=%s' % i, wideness=steps)
-        p2 = Main.plot_cells_bokeh(model)
+        # p1 = Main.plot_states_bokeh(model, title='step=%s' % i, wideness=steps)
+        # p2 = Main.plot_cells_bokeh(model)
         # export_png(grid([[p1,p2]]), filename="Row/row{}.png".format(i))
         reset_output()
-
+    p1 = Main.plot_states_bokeh(model, title='step=%s' % i, wideness=steps)
+    p2 = Main.plot_cells_bokeh(model)
     show(grid([[p1,p2]]))
 
 
