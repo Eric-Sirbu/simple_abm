@@ -29,7 +29,7 @@ class InfectionModel(Model):
 
     def __init__(self, N=500, width=50, height=50, ptrans=0.25,
                  death_rate=0.01, recovery_days=21,
-                 recovery_sd=7, infected_start=0.02, surrounded = False, walls = [], bed_capacity=0.1, death_untreated=1,
+                 recovery_sd=7, infected_start=0.01, surrounded = False, walls = [], bed_capacity=0.1, death_untreated=1,
                  tries_to_move=1, chance_to_stay=0, stay_if_infected=0):
         self.num_agents = N
         self.recovery_days = recovery_days
